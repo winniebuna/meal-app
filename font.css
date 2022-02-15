@@ -1,0 +1,14 @@
+@font-face{
+    font-family: "Cerebri Sans";
+    font-style:normal;
+    src:url(./fonts/Cerebri\ Sans\ Book.ttf);
+    font-style: normal;
+    font-weight: 100;
+}
+@font-face{
+    font-family: "Cerebri Sans";
+    font-style:normal;
+    src:url(./fonts/Cerebri\ Sans\ Bold.ttf);
+    font-style: normal;
+    font-weight: bold;
+}
