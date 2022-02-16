@@ -52,7 +52,7 @@ body{
 }
 .config-btn{
     background: rgba(255, 166, 0, 0.062);
-    border: 1px solid orange;
+    border: 1px solid #FFBE56;;
     width: 9rem;
     height: 2rem;
     border-radius: 1rem;
@@ -93,7 +93,92 @@ body{
     font-size: 15px;
     cursor: pointer;
 }
+/* menu styling */
+.todays-meals{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+    background-color:rgba(255, 188, 101, 0.267) ;
+    border-radius: 2rem 2rem 0 0 ;
+}
+.todays-meals h3{
+    margin-left: 2rem;
+    font-family: 'PT Sans';
+    font-size: 30px;
+}
+.todays-meals button{
+    background-color: #FFBE56;
+    color: white;
+    font-size: 30px;
+    width: 30%;
+    height: 100%;
+    border: none;
+    border-radius: 0 2rem 0 0;
+}
+.menu-items{
+    display: flex;
+    align-items: center;
+    height: 13%;
+    padding: 1rem 2rem;
+}
+.menu-items img{
+    height: 5rem;
+    margin-right: 2rem;
+}
+.menu-items h4, p{
+    font-size: 1.2em;
+    font-weight: 200;
+}
+.menu-items p{
+    color: #6C6C6C;
 
+}
+/* Modal style */
+.modal-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s,  opacity 1.5s;
+    z-index: 1;
+}
+.bg-menu{
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s,  opacity 0.5s;
+}
+.modal{
+    position: relative;
+    background-color: white;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 2rem 2rem 0 0;
+}
+.close-menu{
+    cursor: pointer;
+}
+.bottom-line{
+    height: .5rem;
+    width: 10rem;
+    background-color: #6C6C6C;
+    border-radius: 10px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 2rem;
+}
+
+
+/* Getting started style */
 #getting-started{
     margin-top: 3rem;
     background-color: #CFECFF;
