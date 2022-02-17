@@ -121,12 +121,7 @@ body{
     display: flex;
     align-items: center;
     height: 13%;
-    padding: 1rem 2rem;
-    /* position: absolute; */
-    /* bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0; */
+    padding: 1% 2rem;
     animation: opac 2000ms;
 }
 .menu-items img{
@@ -191,11 +186,11 @@ body{
 
 @keyframes shrink {
     0%{
-        height: 11%;
+        height: 11vh;
         bottom: 50%;
     }
     100%{
-        height: 80%;
+        height: 70vh;
         bottom: 0;
     }
     
