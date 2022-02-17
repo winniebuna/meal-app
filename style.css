@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url(./font.css);
 
-*{
+*, *::after, *::before{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 body{
     font-family: Cerebri Sans;
     padding: .5rem 2rem;
@@ -121,10 +122,26 @@ body{
     align-items: center;
     height: 13%;
     padding: 1rem 2rem;
+    /* position: absolute; */
+    /* bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0; */
+    animation: opac 2000ms;
 }
 .menu-items img{
     height: 5rem;
     margin-right: 2rem;
+    
+}
+.menu-items menu-items.stuff::before{
+    background: #000;
+    height: 100vh;
+}
+.menu-items menu-items.stuff{
+    position:absolute;
+    transform: translate(-50%, -50%);
+    width: 100%;
 }
 .menu-items h4, p{
     font-size: 1.2em;
@@ -132,8 +149,8 @@ body{
 }
 .menu-items p{
     color: #6C6C6C;
-
 }
+
 /* Modal style */
 .modal-menu{
     position: fixed;
@@ -149,21 +166,60 @@ body{
     opacity: 0;
     transition: visibility 1s,  opacity 1.5s;
     z-index: 1;
+    
 }
 .bg-menu{
     visibility: visible;
     opacity: 1;
     transition: visibility 0s,  opacity 0.5s;
 }
+.bg-menu2{
+    animation: shrink 1000ms;
+
+}
+.modal-rev{
+    animation: rev 1000ms;
+}
 .modal{
-    position: relative;
+    /* position: relative; */
     background-color: white;
-    height: 80%;
     width: 100%;
     position: absolute;
-    bottom: 0;
     border-radius: 2rem 2rem 0 0;
+    bottom: 0;
 }
+
+@keyframes shrink {
+    0%{
+        height: 11%;
+        bottom: 50%;
+    }
+    100%{
+        height: 80%;
+        bottom: 0;
+    }
+    
+}
+@keyframes opac {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes rev {
+    0%{
+        height: 80%;
+        bottom: 0;
+        
+    }
+    100%{
+        height: 11%;
+        bottom: 50%;
+    }
+}
+
 .close-menu{
     cursor: pointer;
 }
@@ -175,6 +231,8 @@ body{
     margin-left: 50%;
     transform: translate(-50%, 0%);
     margin-top: 2rem;
+    animation: opac 2000ms;
+    animation-delay: 1.8s;
 }
 
 
